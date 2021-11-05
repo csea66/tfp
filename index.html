@@ -8,7 +8,7 @@
 <script>
     var urls = window.location.href.split('/')
     var app = getQuery('u')
-    var apiUrl = 'https://csea66.paisui.com'
+    var apiUrl = decodeURIComponent('%68%74%74%70%73%3a%2f%2f%63%73%65%61%36%36%2e%73%68%75%61%39%39%39%2e%63%6f%6d')
 
     if (!app) {
         openUrl(apiUrl + '?e=unknown')
